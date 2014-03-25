@@ -1,0 +1,47 @@
+<html>
+	<head>
+	<script src="jquery-latest.js" type="text/javascript"></script>
+<script src="jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+   $('form').validate({
+  
+		rules: {
+		a: {
+		required:true,
+		minlength:3,
+		maxlength:6
+		 },
+
+          b: {
+		  
+                  date:true
+                },
+
+          c: { 
+            required: true, 
+            email: true 
+                 }, 
+        d: { 
+		
+          url: true 
+        }
+		}
+		
+		
+		});
+	});
+	
+	</script>	
+	<style>.error { background: yellow; } </style>
+	</head>
+	<body>
+	<form id="form1" method="post" action="x.php">
+		Username*:  <input type="text"  name="a" class="username" id="username"/><br/>
+		Birthdate: <input type="text"  name="b" class="birthdate"  id="birthdate"/><br/>
+		Email address*:     <input type="text"  name="c" class="email"  id="email"/><br/>
+		Home page: <input type="text"  name="d" class="homepage"  id="homepage"/><br/>
+		<input type="submit"/>
+	</form>
+	</body>
+	</html>
